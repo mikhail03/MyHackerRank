@@ -24,31 +24,15 @@ Explanation
 """
 #!/bin/python
 
-import math
-import os
-import random
-import re
-import sys
-
 # Complete the miniMaxSum function below.
 def miniMaxSum(arr):
-# Finding max and min size of integers
-    max = sys.maxsize-1
-    min = sys.maxsize
 # put the sum of the array into a variable
-    #x = sum(arr)
-    sum = 0
+    x = sum(arr)
 
-    for i in arr:
-        sum += i
-        if i > max:
-            max = i
-        if i < min:
-            min = i
-    print (sum - max, sum-min)
 # print both the minimum and maximum using the max and min funcation
-    #print (x-(min(arr))), (x -(max(arr)))
-
+# Built in max and min function uses the largest and smallest number respectively
+# Use the long build in function to use 64 bit integers
+    print (long(x)-(max(arr))), (long(x) -(min(arr)))
 
 if __name__ == '__main__':
     arr = map(int, raw_input().rstrip().split())
